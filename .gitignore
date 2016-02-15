@@ -1,0 +1,4 @@
+# Project Specific #
+######################
+vagrant/.vagrant
+wp-import-data.xml
