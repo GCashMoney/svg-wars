@@ -55,8 +55,8 @@ php5enmod software
 service apache2 reload
 
 ## Create a database and grant a user some permissions
-echo "create database news;" | mysql -u root
-echo "grant all on news.* to news@localhost identified by 'news';" | mysql -u root
+echo "create database svgwars;" | mysql -u root
+echo "grant all on svgwars.* to svgwars@localhost identified by 'svgwars';" | mysql -u root
 
 ## Create a default .htaccess
 echo "# BEGIN WordPress
@@ -87,9 +87,9 @@ rm /var/www/wordpress/wp-config-sample.php
 ## Could use wp-cli for this too, but this'll do
 echo "<?php
 \$table_prefix = 'foo_';
-define('DB_NAME',     'news');
-define('DB_USER',     'news');
-define('DB_PASSWORD', 'news');
+define('DB_NAME',     'svgwars');
+define('DB_USER',     'svgwars');
+define('DB_PASSWORD', 'svgwars');
 define('DB_HOST',     'localhost');
 define('DB_CHARSET',  'utf8');
 define('WPLANG', '' );
@@ -117,7 +117,7 @@ require_once(ABSPATH . 'wp-settings.php');
 	--path=/var/www/wordpress \
 	--allow-root
 
-/var/www/wordpress/wp-cli option update blogdescription 'A test site for news.' \
+/var/www/wordpress/wp-cli option update blogdescription 'A test site for svgwars.' \
 	--path=/var/www/wordpress \
 	--allow-root
 
@@ -125,25 +125,9 @@ require_once(ABSPATH . 'wp-settings.php');
 	--path=/var/www/wordpress \
 	--allow-root
 
-/var/www/wordpress/wp-cli theme activate svgwars \
+/var/www/wordpress/wp-cli theme activate svg-wars \
 	--path=/var/www/wordpress \
 	--allow-root
-
-# Check and see if there is an import file. If so download the import plugin and run it.
-file=/var/www/wordpress/wp-content/themes/news-website/wp-import-data.xml
-if [ -f $file ];
-then
-	/var/www/wordpress/wp-cli plugin install wordpress-importer --activate \
-		--path=/var/www/wordpress \
-		--allow-root
-
-	/var/www/wordpress/wp-cli import '/var/www/wordpress/wp-content/themes/central-news/wp-import-data.xml' \
-		--authors=skip \
-		--path=/var/www/wordpress \
-		--allow-root
-else
-	echo "Did not import data"
-fi
 
 /var/www/wordpress/wp-cli post delete 1 --force \
 	--path=/var/www/wordpress \

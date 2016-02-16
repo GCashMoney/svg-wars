@@ -29,73 +29,12 @@
 		remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal');
 		remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side');
 	}
-	
-/*Allow users to add custom navigation menus*/
-	function register_my_menus() {
-		register_nav_menus(
-			array('sidebar-menu' => __( 'Sidebar Menu' ))
-  		);
-	}
-	add_action( 'init', 'register_my_menus' );
-	
-	/*Allow users to add widgets to the sidebar*/
-	if ( function_exists('register_sidebar') )
-	    register_sidebar(array(
-			'name' => 'Right sidebar', 
-			'description' => 'These widgets show on the right side of all your pages',
-			'before_widget' => '<div class="sideBarGrouping">',
-			'after_widget' => '</div>'
-		));
 
-// Register a sidebar for the Popular Posts plugin
-	register_sidebar(array('name' => 'primary-widget-area', 'description' => 'These widgets show on the left side of all your pages'));
-	
-/* Shorten excerpt length
-	function new_excerpt_length($length) {
-		return 25;
+ //Allows svg's to be uploaded to media
+	function cc_mime_types( $mimes ){
+		$mimes['svg'] = 'image/svg+xml';
+		return $mimes;
 	}
-	add_filter('excerpt_length', 'new_excerpt_length');*/
-	
-//Modify the search template
-	function search_form ( $form ) {
-		$form = '<form role="search" method="get" class="searchform" action="' . home_url( '/' ) . '" >
-			<input type="text" placeholder="Search" value="' . get_search_query() . '" name="s" class="s" />
-			<button type="image" id="searchsubmit" value="'. esc_attr__('Search') .'" />Search</button>
-			</form>';
-		return $form;
-	}
-	add_filter( 'get_search_form', 'search_form' );
-
-//Modify the commenting function
-	if ( ! function_exists( 'civitas_comment' ) ) :
-		function civitas_comment( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment;
-	switch ( $comment->comment_type ) :
-		case '' :
-	?>
-	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		<div id="comment-<?php comment_ID(); ?>">
-			<div class="comment-author vcard"><?php printf( __( '%s', 'civitas' ), sprintf( '<h3 class="fn">%s</h3>', get_comment_author_link() ) ); ?>
-				<p class="commentStrike">|</p>				
-				<p><?php printf( __( '%2$s on %1$s', 'civitas' ), get_comment_date(),  get_comment_time() ); ?></p><?php edit_comment_link( __( '(Edit)', 'civitas' ),' ' );?>
-			</div><!-- .comment-author .vcard -->
-			<?php if ( $comment->comment_approved == '0' ) : ?>
-				<em><?php _e( 'Your comment is awaiting moderation.', 'civitas' ); ?></em>
-				<br />
-			<?php endif; ?>
-			<div class="comment-body"><?php comment_text(); ?></div>
-		</div><!-- #comment-##  -->
-	<?php
-		break;
-		case 'pingback'  :
-		case 'trackback' :
-	?>
-	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'civitas' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('(Edit)', 'civitas'), ' ' ); ?></p>
-	<?php
-			break;
-	endswitch;
-}
-endif;
+	add_filter( 'upload_mimes', 'cc_mime_types' );
 
 	

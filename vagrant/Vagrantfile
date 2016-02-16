@@ -9,14 +9,14 @@ Vagrant.configure(2) do |config|
 	config.vm.network "private_network", ip: "192.168.56.111"
 
 	# We want to share the parent folder with the VM. Specifically the wp-content/themes/central-news folder.
-	config.vm.synced_folder "../", "/var/www/wordpress/wp-content/themes/central-news",
+	config.vm.synced_folder "../", "/var/www/wordpress/wp-content/themes/svg-wars",
 	owner: "www-data", group: "www-data"
 
 	# We are using VirtualBox so we have a couple of specific things we want to setup.
 	config.vm.provider "virtualbox" do |vb|
 		# Customize the amount of memory on the VM:
 		vb.memory = "2056"
-		vb.name = "dev.svg.edu"
+		vb.name = "dev.svg.com"
 		
 		# Tell box to use the DNS of the host
 		vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]

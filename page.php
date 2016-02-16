@@ -1,5 +1,5 @@
 <?php get_header();?>
-<div id="bodyContent">
+<div id="pageContent">
 <h1>SVG Wars</h1>
 <?php if (have_posts()) : while (have_posts()) : the_post(); 
 	$this_post_type = get_post_type($post->ID);
