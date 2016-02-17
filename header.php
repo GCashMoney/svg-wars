@@ -3,6 +3,7 @@
     <head>
       <link href="<?php bloginfo( 'stylesheet_url' ); ?>" rel="stylesheet" type="text/css" media="screen" />
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,600italic|Source+Sans+Pro:400,600italic' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.jpg" />
     </head>
   <div id="wrapper">
   <div id="webtitle">
