@@ -88,6 +88,9 @@ h1 {
 }
 
 /* ------------------ Home styles  -------------------- */
+#home {
+    padding-top:1em;
+}
 #home p{
     padding: 1em;
 }
@@ -114,6 +117,130 @@ h1 {
     margin: 0 auto;
 }
 
+/* ------------------ Lightsabers  -------------------- */
+#anakin {
+    background:white;
+    padding-left:2.5em;
+}
+#outline {
+  stroke-dasharray: 2500;
+  stroke-dashoffset: 2500;
+  animation: draw 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+#knob {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: draw 10s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+#handle {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;  
+}
+#center {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;   
+}
+#side {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+#button {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: draw 20s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+#bunnyears {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 10s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+#line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+#circle {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: draw 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+#colors {
+ fill-opacity:0;
+}
+#fillhandle {
+  animation: show 1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+#black {
+  animation: show 1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+#silver {
+  animation: show 1s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+#darksilver {
+  animation: show 1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+#yellow {
+  animation: show 1s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+#orange {
+  animation: show 1s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
 
 /* ------------------ Footer  -------------------- */
 #footer{
@@ -127,4 +254,17 @@ h1 {
     padding: 1em;
 	margin: 5px;
 	line-height:1em;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+     }
+}  
+  
+@keyframes show {
+   to {
+    fill-opacity: 1;
+    opacity: 1;
+ }
 }
