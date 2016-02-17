@@ -13,6 +13,9 @@
         <div id="wrapper">
           <ul>
             <li>
+              <a href="//192.168.56.111">Home</a>
+            </li>
+            <li>
               <a href="//www.svgwars.com/whatissvg">What is SVG?</a>
             </li>
             <li>
