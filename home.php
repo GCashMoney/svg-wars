@@ -2,9 +2,13 @@
 //Featured Story Loop
 $topStoryLoop = new WP_Query( array('post_type' => 'post', 'posts_per_page'=>3)); 
 ?>
+<body>
 <div id="wrapper">
   <div id="home">
-    <img src="http://192.168.56.111/svg-wars/images/Poster4.jpg"></img>
+    <div id="anakin">
+      <object type="image/svg+xml" data="<?php echo bloginfo('template_directory')?>/images/anakin.svg"></object>
+      <!--<img src="<?php echo bloginfo('template_directory')?>/images/anakin.svg"></img>!-->
+    </div>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus lectus mauris, nec elementum erat feugiat a. Cras lacinia tristique mollis. Sed vel aliquam felis. Phasellus aliquet ac est at placerat. Quisque tincidunt, lacus vitae volutpat tempus, massa nisi tempor ex, vitae fermentum nunc dui eu elit. Integer et arcu tortor. Suspendisse vel congue mi. Praesent porta arcu id ex malesuada, ac lacinia erat porta. Ut id orci efficitur, accumsan orci quis, aliquet ante. Mauris sit amet purus et nulla iaculis varius. Praesent tincidunt rhoncus consectetur. Curabitur lacinia laoreet nisi vel tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed porttitor sollicitudin est, in tempus sem cursus eget. Curabitur sagittis, nibh dignissim mollis pretium, urna ligula iaculis erat, a suscipit mauris ligula sed libero.
       Nullam porttitor gravida accumsan. Nullam maximus suscipit arcu, at hendrerit enim. Vivamus et congue nibh. In nunc tortor, luctus non orci sit amet, ultricies sodales erat. Maecenas cursus ultrices risus, ac congue risus faucibus in. Ut vitae fringilla quam. Vestibulum elit velit, mollis at mattis vel, tincidunt in mi. Maecenas a mi vel ipsum convallis feugiat a vel leo. Donec maximus tristique justo, vel varius urna. Aliquam pulvinar vitae metus in efficitur. Maecenas congue, tortor laoreet venenatis mollis, justo orci lobortis nibh, ut interdum justo tellus sit amet turpis. Nulla facilisi. Praesent molestie viverra ipsum ac varius. Quisque porttitor libero nec commodo bibendum. Donec sollicitudin aliquet nisi quis rhoncus. Fusce non bibendum quam.
@@ -17,5 +21,5 @@ $topStoryLoop = new WP_Query( array('post_type' => 'post', 'posts_per_page'=>3))
     </p>
   </div>
 </div>
-
+</body>
 <?php get_footer(); ?>
