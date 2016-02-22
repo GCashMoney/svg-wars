@@ -3,6 +3,7 @@
     <head>
       <link href="<?php bloginfo( 'stylesheet_url' ); ?>" rel="stylesheet" type="text/css" media="screen" />
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,600italic|Source+Sans+Pro:400,600italic' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.jpg" />
     </head>
   <div id="wrapper">
   <div id="webtitle">
@@ -12,6 +13,9 @@
       <div id="siteNav">
         <div id="wrapper">
           <ul>
+            <li>
+              <a href="//192.168.56.111">Home</a>
+            </li>
             <li>
               <a href="//www.svgwars.com/whatissvg">What is SVG?</a>
             </li>

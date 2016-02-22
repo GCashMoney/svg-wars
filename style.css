@@ -116,6 +116,10 @@ h1 {
     width: 940px;
     margin: 0 auto;
 }
+#webtitle {
+    width: 170px;
+    margin: 0 auto;
+}
 
 /* ------------------ Lightsabers  -------------------- */
 #anakin {
