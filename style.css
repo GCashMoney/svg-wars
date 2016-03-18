@@ -83,6 +83,11 @@ h1 {
     color: yellow;
     font-size: 36px;
 }
+h2 {
+    font-size:46px;
+    text-align:center;
+    padding: .5em 0;
+}
 #webtitle {
     position: center;
 }
@@ -94,23 +99,61 @@ h1 {
 #home p{
     padding: 1em;
 }
+/* ------------------ Page styles  -------------------- */
+#pageContent {
+    width: 940px;
+    margin: 0 auto;
+}
+#pageContent p {
+    padding:1em;
+}
 /* ------------------ Site nav  -------------------- */
 #siteNav{
 	background-color: #ffeb99;
 	width: 100%;
-	padding: 1em 0em;
 }
-#siteNav ul li{
-	display:inline;
+#siteNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
-#siteNav ul li a{
-	color: black;
-	padding: .9em 2em;
-	text-decoration:none;
+#siteNav li{
+    float: left;
 }
-#siteNav ul li a:hover{
+#siteNav li a, .dropbtn {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 1em 1.5em;
+    text-decoration: none;
+}
+#siteNav li a:hover, .dropdown:hover .dropbtn {
 	background-color:#fff7e6;
 	color: black;
+}
+li.dropdown {
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: green;
+    width: 10em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.dropdown-content a:hover {background-color: #fff7e6}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 #wrapper {
     width: 940px;
