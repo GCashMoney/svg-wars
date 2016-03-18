@@ -1,16 +1,18 @@
 <?php get_header();?>
 <div id="pageContent">
-<h1>SVG Wars</h1>
 <?php if (have_posts()) : while (have_posts()) : the_post(); 
 	$this_post_type = get_post_type($post->ID);
 	if ($this_post_type == 'post'){
 		$displayPost = 'Featured: ';
 	}
 ?>
-	<h2><?php echo $displayPost; the_title();?></h2>
+
 		<div class="post" id="post-<?php the_ID(); ?>" >
             <div class="feature-info">
                 <div class="entry">
+                  <h2>
+                    <?php echo $displayPost; the_title();?>
+                  </h2>
                     <?php the_content(); ?>
                 </div>
             </div>

@@ -6,6 +6,139 @@
 	 id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="testsabersimple.svg" inkscape:version="0.91 r13725"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="850px" height="190.5px"
 	 viewBox="0 0 850 190.5" enable-background="new 0 0 850 190.5" xml:space="preserve">
+	 
+<style type="text/css"><![CDATA[
+#outline {
+  stroke-dasharray: 2500;
+  stroke-dashoffset: 2500;
+  animation: draw 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+#knob {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: draw 10s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+#handle {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;  
+}
+#center {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;   
+}
+#side {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+#button {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: draw 20s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+#bunnyears {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 10s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+#line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+#circle {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: draw 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+#colors {
+ fill-opacity:0;
+}
+#fillhandle {
+  animation: show 1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+#black {
+  animation: show 1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+#silver {
+  animation: show 1s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+#darksilver {
+  animation: show 1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+#yellow {
+  animation: show 1s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+#orange {
+  animation: show 1s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+     }
+}  
+  
+@keyframes show {
+   to {
+    fill-opacity: 1;
+    opacity: 1;
+ }
+}]]></style>
 
 <g id="layer1" transform="translate(0,-752.36216)" inkscape:label="Outline" inkscape:groupmode="layer">
 	

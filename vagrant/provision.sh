@@ -129,6 +129,22 @@ require_once(ABSPATH . 'wp-settings.php');
 	--path=/var/www/wordpress \
 	--allow-root
 
+# Check and see if there is an import file. If so download the import plugin and run it.
+file=/var/www/wordpress/wp-content/themes/news-website/wp-import-data.xml
+if [ -f $file ];
+then
+	/var/www/wordpress/wp-cli plugin install wordpress-importer --activate \
+		--path=/var/www/wordpress \
+		--allow-root
+
+	/var/www/wordpress/wp-cli import '/var/www/wordpress/wp-content/themes/svg-wars/wp-import-data.xml' \
+		--authors=skip \
+		--path=/var/www/wordpress \
+		--allow-root
+else
+	echo "Did not import data"
+fi
+
 /var/www/wordpress/wp-cli post delete 1 --force \
 	--path=/var/www/wordpress \
 	--allow-root
