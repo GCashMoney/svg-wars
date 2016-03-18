@@ -6,26 +6,30 @@
 		$displayPost = 'Featured: ';
 	}
 ?>
-
-		<div class="post" id="post-<?php the_ID(); ?>" >
-            <div class="feature-info">
-                <div class="entry">
-                  <h2>
-                    <?php echo $displayPost; the_title();?>
-                  </h2>
-                    <?php the_content(); ?>
-                </div>
-            </div>
+  <div id="wrapper">
+    <div class="post" id="post-"
+      <?php the_ID(); ?>" >
+      <div class="feature-info">
+        <div class="entry">
+          <h2>
+            <?php echo $displayPost; the_title();?>
+          </h2>
+          <?php the_content(); ?>
         </div>
-		<?php endwhile; ?>
+      </div>
+    </div>
+    <?php endwhile; ?>
 
-	<?php else : ?>
+    <?php else : ?>
 
-		<h2 class="center">Not Found</h2>
-		<p class="center">Sorry, but you are looking for something that isn't here.</p>
-        <p>Start over at <a href="/">the homepage</a>.</p>
+    <h2 class="center">Not Found</h2>
+    <p class="center">Sorry, but you are looking for something that isn't here.</p>
+    <p>
+      Start over at <a href="/">the homepage</a>.
+    </p>
 
-	<?php endif; ?>
+    <?php endif; ?>
+  </div>
 
 <div class="clearBoth spacer"></div>
 </div>

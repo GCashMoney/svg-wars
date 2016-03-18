@@ -16,28 +16,31 @@
             <li>
               <a href="//192.168.56.111">Home</a>
             </li>
-            <li>
-              <a href="//www.svgwars.com/whatissvg">What is SVG?</a>
-            </li>
-            <li>
-              <a href="//www.svgwars.com/tutorials">Tutorials</a>
-            </li>
             <li class="dropdown">
-              <a href="http://192.168.56.111/lightsabers/" class="dropbtn">Lightsabers</a>
+              <a href="<?php echo bloginfo('template_directory')?>/what-is-svg/" class="dropbtn">What is SVG?</a>
+            </li>  
+            <li class="dropdown">
+              <a href="<?php echo bloginfo('template_directory')?>/tutorials/" class="dropbtn">Tutorials</a>
                 <div class="dropdown-content">
-                  <a href="http://192.168.56.111/lightsabers/">Anakin</a>
+                  <a href="<?php echo bloginfo('template_directory')?>/creation/">Creation</a>
                 </div>
             </li>  
             <li class="dropdown">
-              <a href="http://192.168.56.111/bb-8/" class="dropbtn">Droids</a>
+              <a href="<?php echo bloginfo('template_directory')?>/lightsabers/" class="dropbtn">Lightsabers</a>
                 <div class="dropdown-content">
-                  <a href="http://192.168.56.111/bb-8/">BB-8</a>
+                  <a href="<?php echo bloginfo('template_directory')?>/lightsabers/">Anakin</a>
+                </div>
+            </li>  
+            <li class="dropdown">
+              <a href="<?php echo bloginfo('template_directory')?>/bb-8/" class="dropbtn">Droids</a>
+                <div class="dropdown-content">
+                  <a href="<?php echo bloginfo('template_directory')?>/bb-8/">BB-8</a>
                 </div>
             </li>
             <li class="dropdown">
-              <a href="http://192.168.56.111/x-wing/" class="dropbtn">Ships</a>
+              <a href="<?php echo bloginfo('template_directory')?>/x-wing/" class="dropbtn">Ships</a>
                 <div class="dropdown-content">
-                  <a href="http://192.168.56.111/x-wing/">X-Wing</a>
+                  <a href="<?php echo bloginfo('template_directory')?>/x-wing/">X-Wing</a>
                 </div>
             </li>
           </ul>
