@@ -3,8 +3,8 @@
 $topStoryLoop = new WP_Query( array('post_type' => 'post', 'posts_per_page'=>3)); 
 ?>
 <body>
-<div id="wrapper">
   <div id="home">
+    <div id="wrapper">
     <!--<div id="anakin">
       <object type="image/svg+xml" data="<?php echo bloginfo('template_directory')?>/images/anakin.svg"></object>
       <img src="<?php echo bloginfo('template_directory')?>/images/anakin.svg"></img>
