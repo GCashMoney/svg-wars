@@ -41,6 +41,7 @@
               <a href="<?php echo bloginfo('template_directory')?>/x-wing/" class="dropbtn">Ships</a>
                 <div class="dropdown-content">
                   <a href="<?php echo bloginfo('template_directory')?>/x-wing/">X-Wing</a>
+				  <a href="#">BLAHABLAHAHBAL</a>
                 </div>
             </li>
           </ul>
