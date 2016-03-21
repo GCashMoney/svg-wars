@@ -104,9 +104,20 @@ h2 {
 #pageContent {
     margin: 0 auto;
     background-image: url("images/space1.jpg");
+	line-height:1.2em;
 }
 #pageContent p {
     padding:1em;
+}
+#pageContent ul {
+	padding:1em;
+	list-style:circle;
+}
+#pageContent a {
+	color:white;
+}
+#pageContent a:hover {
+	text-decoration:none;
 }
 /* ------------------ Site nav  -------------------- */
 #siteNav{
@@ -128,6 +139,7 @@ h2 {
     text-align: center;
     padding: 1em 1.5em;
     text-decoration: none;
+	width:6.79em;
 }
 #siteNav li a:hover, .dropdown:hover .dropbtn {
 	background-color:#fff7e6;
@@ -135,21 +147,21 @@ h2 {
 }
 li.dropdown {
     display: inline-block;
+	float:left;
 }
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: green;
-    width: 10em;
+    background-color: #ffeb99;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: center;
+	width:6.79em;
 }
 .dropdown-content a:hover {background-color: #fff7e6}
 
