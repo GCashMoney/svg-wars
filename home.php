@@ -4,7 +4,9 @@ $topStoryLoop = new WP_Query( array('post_type' => 'post', 'posts_per_page'=>3))
 ?>
 <body>
   <div id="home">
+    
     <div id="wrapper">
+      <div id="homegray">
     <!--<div id="anakin">
       <object type="image/svg+xml" data="<?php echo bloginfo('template_directory')?>/images/anakin.svg"></object>
       <img src="<?php echo bloginfo('template_directory')?>/images/anakin.svg"></img>
@@ -13,6 +15,7 @@ $topStoryLoop = new WP_Query( array('post_type' => 'post', 'posts_per_page'=>3))
       This is the home page of SVG Wars. There will be icons to help guide people.
     </p>
   </div>
+    </div>
 </div>
 </body>
 <?php get_footer(); ?>

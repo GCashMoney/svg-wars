@@ -77,7 +77,7 @@ body{
 	font-family: 'Raleway', sans-serif;
 	background-color: black;
     line-height: 1;
-    color: white;
+    color: black;
 }
 h1 {
     color: yellow;
@@ -87,6 +87,15 @@ h2 {
     font-size:46px;
     text-align:center;
     padding: .5em 0;
+    font-weight:bold;
+}
+h3 {
+    font-size:24px;
+    padding-left:.5em;
+    font-weight:bold;
+}
+img {
+    padding: 1em 0;
 }
 #webtitle {
     position: center;
@@ -94,30 +103,37 @@ h2 {
 
 /* ------------------ Home styles  -------------------- */
 #home {
-    padding-top:1em;
+    padding-top:.5em;
     background-image: url("images/space1.jpg");
 }
 #home p{
     padding: 1em;
+}
+#homegray {
+    background-color:#efeff5;
 }
 /* ------------------ Page styles  -------------------- */
 #pageContent {
     margin: 0 auto;
     background-image: url("images/space1.jpg");
 	line-height:1.2em;
+    padding-top:.5em;
 }
 #pageContent p {
     padding:1em;
 }
 #pageContent ul {
-	padding:1em;
+	padding: 0 1em 1em 3em;
 	list-style:circle;
 }
 #pageContent a {
-	color:white;
+	color:black;
 }
 #pageContent a:hover {
 	text-decoration:none;
+}
+.post {
+    background-color:#efeff5;
 }
 /* ------------------ Site nav  -------------------- */
 #siteNav{
@@ -134,12 +150,13 @@ h2 {
     float: left;
 }
 #siteNav li a, .dropbtn {
-    display: inline-block;
+    display: block;
     color: black;
     text-align: center;
     padding: 1em 1.5em;
     text-decoration: none;
 	width:6.79em;
+
 }
 #siteNav li a:hover, .dropdown:hover .dropbtn {
 	background-color:#fff7e6;
@@ -179,21 +196,62 @@ li.dropdown {
 
 /* ------------------ Lightsabers  -------------------- */
 #anakin {
-    background:white;
+    background:#efeff5;
     padding-left:2.5em;
 }
 
 /* ------------------ Footer  -------------------- */
 #footer{
 	background-color: #ffeb99;
-	border-radius: 1em 1em 0 0;
+	border-radius: 0 0 1em 1em;
 	color: black;
 	font-size: .8em;
 	width: 100%;
+    text-align:center;
+    margin:0 auto;
 }
 #footer p{
     padding: 1em;
 	margin: 5px;
 	line-height:1em;
     text-align: center;
+}
+
+/* ------------------ Responsive Styles  -------------------- */
+@media only screen and (max-width: 400px) {
+    li.dropdown {
+        display: block;
+        float:none;
+    }
+    #webtitle {
+        float: none;
+        margin:0 auto;
+    }
+    #footer {
+        float:none;
+        margin:0 auto;
+    }
+    #wrapper {
+        width: unset;
+        margin: unset;
+    }
+    #siteNav {
+        width:400px;
+    }
+    #siteNav li a, .dropbtn {
+	    width: 22em;
+        margin:0 auto;
+    }
+    img {
+        width:100%;
+        height:100%;
+        margin:0 auto;
+        padding-left:0em !important;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: orange;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
 }
