@@ -12,7 +12,7 @@
     </head>
   <div id="wrapper">
   <div id="webtitle">
-    <h1>SVG Wars</h1>
+    <a href="//192.168.56.111"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/svgwarslogofinal.svg"></a>
   </div>
  </div>
       <div id="siteNav">
